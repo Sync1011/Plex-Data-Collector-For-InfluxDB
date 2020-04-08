@@ -230,6 +230,7 @@ class PlexInfluxdbCollector:
                             'media_type': media_type,
                             'playback': 'transcode' if transcode else 'direct',
                             'duration': time.time() - start_time,
+                            'last_seen': start_time,
                         },
                         'tags': {
                             'host': host,
